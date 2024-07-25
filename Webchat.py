@@ -78,19 +78,19 @@ with st.sidebar:
     website_url = st.text_input("Website URL")
 
 if website_url is None or website_url == "":
-    st.info("Please enter a website URL")
+    st.info("Feed me before you ask me")
 
 else:
     # session state
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = [
-            AIMessage(content="Hello, I am a bot. How can I help you?"),
+            AIMessage(content="Nandamo"),
         ]
     if "vector_store" not in st.session_state:
         st.session_state.vector_store = get_vectorstore_from_url(website_url)    
 
     # user input
-    user_query = st.chat_input("Type your message here...")
+    user_query = st.chat_input("Type here...")
     if user_query is not None and user_query != "":
         response = get_response(user_query)
         st.session_state.chat_history.append(HumanMessage(content=user_query))
