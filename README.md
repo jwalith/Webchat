@@ -1,3 +1,3 @@
 # Webchat
 
-Developed a Streamlit-web application with an interactive chat interface that enables users to dynamically query and extract information from any inputted website URL using advanced LLMs.
+A chatbot capable of interacting with websites, extracting information, and providing user-friendly responses. It uses LangChain,Open AI, RAG and integrates it with a Streamlit GUI to enhance the overall experience.
